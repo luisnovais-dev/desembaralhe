@@ -1,0 +1,44 @@
+name: Defeito
+description: Relatar um comportamento que difere do esperado.
+title: "[bug] "
+labels:
+  - type:bug
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: O que acontece, quem é afetado e onde foi observado.
+    validations:
+      required: true
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para reproduzir
+      description: Passos numerados que reproduzem o comportamento na main remota atual.
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamento esperado
+      description: O que deveria acontecer.
+    validations:
+      required: true
+  - type: textarea
+    id: observado
+    attributes:
+      label: Comportamento observado
+      description: O que acontece hoje, incluindo mensagens de erro (sem segredos nem dados pessoais).
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite
+      description: Condições verificáveis que mostram que o defeito foi corrigido.
+    validations:
+      required: true

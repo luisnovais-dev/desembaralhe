@@ -1,0 +1,74 @@
+name: Épico
+description: Agrupar entregas que formam uma capacidade usável pelo consumidor real. Cada item vira um ticket filho.
+title: "[epic] "
+labels:
+  - type:epic
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Situação atual, necessidade do usuário e por que os itens pertencem à mesma capacidade.
+    validations:
+      required: true
+  - type: input
+    id: dono
+    attributes:
+      label: Dono do épico
+      description: Pessoa responsável pelo plano e pelo fechamento do épico.
+    validations:
+      required: true
+  - type: textarea
+    id: cenarios
+    attributes:
+      label: Cenários
+      description: Cenários de aceite em Given/When/Then. O épico é demonstrável pelo consumidor real.
+      placeholder: |
+        Dado que <contexto>
+        Quando <ação do usuário>
+        Então <resultado observável>
+    validations:
+      required: true
+  - type: textarea
+    id: suite_aceite
+    attributes:
+      label: Casos E2E de aceite
+      description: Quais casos E2E provam a capacidade, um por cenário que cruza a costura com o sistema. Cada ticket que muda a costura ativa os seus casos, no próprio ticket que os entrega (ver docs/PROCESSO.md, Quando um ticket precisa de E2E).
+    validations:
+      required: true
+  - type: textarea
+    id: grafo
+    attributes:
+      label: Grafo de tickets por papel
+      description: Tickets por papel (contrato, persistência, regra, interface, integração e aceite), com as dependências entre eles.
+      placeholder: |
+        - contrato: <título> (bloqueia: -)
+        - persistência: <título> (bloqueado por: contrato)
+        - interface: <título> (bloqueado por: contrato)
+  - type: textarea
+    id: contrato
+    attributes:
+      label: Esboço do contrato
+      description: Preencha quando houver fronteira entre front e back. Descreva a interface compartilhada.
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceite do épico
+      description: Condições que precisam ser verdadeiras para o épico fechar, incluindo os casos E2E do épico ativos e verdes na main integrada.
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist de itens
+      description: Uma linha por ticket filho, no formato "- [ ] #<número> — <título>". Itens ainda não criados usam "- [ ] <título provisório>".
+      placeholder: |
+        - [ ] #<número> — <título do item 1>
+        - [ ] <título provisório do item 2>
+    validations:
+      required: true
+  - type: textarea
+    id: fora
+    attributes:
+      label: Fora do épico
+      description: Itens relacionados que não pertencem a esta capacidade. Registre-os como issues separadas.

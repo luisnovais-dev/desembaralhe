@@ -1,0 +1,53 @@
+name: Baseline de qualidade
+description: Registrar uma falha de gate confirmada na main remota, sem atribuí-la a uma mudança nova.
+title: "[baseline] "
+labels:
+  - type:bug
+body:
+  - type: dropdown
+    id: gate
+    attributes:
+      label: Gate
+      description: Qual gate este registro representa?
+      options:
+        - Lint
+        - Typecheck
+        - Testes
+        - Build
+        - Vários gates
+    validations:
+      required: true
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidência
+      description: Comandos exatos e resultados de um checkout limpo da main remota.
+      placeholder: |
+        <comando de lint> — <resultado resumido>
+        <comando de testes> — <resultado resumido>
+        <comando de typecheck> — <resultado resumido>
+    validations:
+      required: true
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto operacional
+      description: O que se sabe sobre o impacto e o que continua incerto.
+    validations:
+      required: true
+  - type: textarea
+    id: remediacao
+    attributes:
+      label: Plano de correção
+      description: Trabalho de acompanhamento ou responsável necessário para encerrar esta baseline.
+    validations:
+      required: true
+  - type: checkboxes
+    id: classificacao
+    attributes:
+      label: Classificação
+      options:
+        - label: O mesmo resultado foi reproduzido em um checkout limpo da main remota.
+          required: true
+        - label: Este registro não autoriza ignorar regressões futuras na mesma área.
+          required: true
