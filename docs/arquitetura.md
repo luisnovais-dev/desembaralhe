@@ -3,7 +3,7 @@
 ## Plataforma e escopo
 
 - MVP por dispositivo: o aplicativo roda no aparelho, com o diário local (ver especificação, seção Arquitetura do MVP).
-- Plataforma inicial: **pendente** (a especificação deixa web, Android e iOS em aberto).
+- Plataforma inicial: **Android**, com iOS depois (ver [ADR 0001](adr/0001-plataforma-inicial-android.md)).
 
 ## Decisão em aberto: chave de IA
 
