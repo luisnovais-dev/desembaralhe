@@ -6,3 +6,4 @@
 |---|---|---|
 | [0001](0001-plataforma-inicial-android.md) | Plataforma inicial: Android, com iOS depois | Aceito |
 | — | Chave de IA e presença de backend no MVP | Proposto, pendente (ver arquitetura.md) |
+| [0002](0002-base-editorial-privada.md) | Base editorial em armazenamento privado, fora do git | Aceito |

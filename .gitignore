@@ -44,3 +44,10 @@ captures/
 .cxx/
 app/build/
 app/release/
+
+# Base editorial e fontes (ADR 0002): nunca versionar arquivos de fontes
+*.pdf
+*.epub
+*.doc
+*.docx
+base-editorial/
