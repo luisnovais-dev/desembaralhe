@@ -7,7 +7,10 @@
 
 ## Backend e chave de IA
 
-Decidido na [ADR 0003](adr/0003-backend-chave-de-ia.md): um servidor guarda a chave de IA e a base editorial privada, monta o contexto e chama a IA. O diário fica no aparelho no piloto.
+No MVP (hipótese A), não há servidor: a [ADR 0004](adr/0004-mvp-byo-hipotese-a.md) dispensa o backend e a chave de IA é a do próprio usuário.
+
+
+Para a hipótese B (base curada), decidido na [ADR 0003](adr/0003-backend-chave-de-ia.md): um servidor guarda a chave de IA e a base editorial privada, monta o contexto e chama a IA. O diário fica no aparelho no piloto.
 
 ## Referência Android: dependências do Mobile-Harness
 
