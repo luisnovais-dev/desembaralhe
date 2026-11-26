@@ -5,14 +5,9 @@
 - MVP por dispositivo: o aplicativo roda no aparelho, com o diário local (ver especificação, seção Arquitetura do MVP).
 - Plataforma inicial: **Android**, com iOS depois (ver [ADR 0001](adr/0001-plataforma-inicial-android.md)).
 
-## Decisão em aberto: chave de IA
+## Backend e chave de IA
 
-A especificação prevê que o backend guarda a chave de API da IA e intermedia a chamada. Um MVP só por dispositivo não tem esse backend. Antes de escolher a stack, é preciso decidir:
-
-1. Manter um backend mínimo só para a chamada à IA e a entrega idempotente da leitura; ou
-2. Chamar a IA direto do aparelho, o que expõe a chave e contraria a especificação.
-
-Até essa decisão, nenhuma chave vai para o aplicativo nem para o repositório.
+Decidido na [ADR 0003](adr/0003-backend-chave-de-ia.md): um servidor guarda a chave de IA e a base editorial privada, monta o contexto e chama a IA. O diário fica no aparelho no piloto.
 
 ## Referência Android: dependências do Mobile-Harness
 
